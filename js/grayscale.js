@@ -185,3 +185,8 @@ function init() {
         icon: image
     });
 }
+
+function loadNav(){
+document.getElementById("mynav").innerHTML='<object type="text/html" data="navcode.html" ></object>';
+}
+
