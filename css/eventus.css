@@ -246,14 +246,27 @@ div.malefemalefrontpage{
 	margin-left : auto;
 	margin-right : auto;
 }
+div.malefemalefrontpage img
+{	
+	border : 1px solid transparent;
+	border-radius : 3px;
+	padding : 10px;
+	-webkit-transition: border-color 2s;
+	transition: border-color 2s;
+}
+div.malefemalefrontpage img:hover{
+	border-color : #42dca3;
+	
+}
 h1.page-header
 {
-	color : white;
+	font-weight : bold;
+	text-rendering : optimizeLegibility;
 	text-shadow:
-    -1px -1px 0 white,
-    1px -1px 0 white,
-    -1px 1px 0 white,
-    1px 1px 0 #white
+    -1px -1px 0 #42dca3,
+    1px -1px 0 #42dca3,
+    -1px 1px 0 #42dca3,
+    1px 1px 0 #42dca3;
 
 }
 

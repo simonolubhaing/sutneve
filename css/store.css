@@ -11,14 +11,12 @@ footer {
 
 h1.page-header
 {
-	background: linear-gradient(90deg, rgba(211,211,211,0.5), white);
-	border : 1px solid rgba(211,211,211,0.8);
-	padding : 5px;
+
 	font-weight : bold;
 	color : white;
 	text-shadow : 
-	-1px -1px 0 grey,
-    1px -1px 0 grey,
-    -1px 1px 0 grey,
-    1px 1px 0 grey;
+	-1px -1px 0 #42dca3,
+    1px -1px 0 #42dca3,
+    -1px 1px 0 #42dca3,
+    1px 1px 0 #42dca3;
 }
