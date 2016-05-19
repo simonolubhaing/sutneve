@@ -1,0 +1,15 @@
+body {
+	padding-top: 70px; 
+	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.portfolio-item {
+	margin-bottom: 25px;
+}
+footer {
+	margin: 50px 0;
+}
+
+h1.page-header
+{
+	font-weight : bold;
+}
