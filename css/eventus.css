@@ -77,34 +77,34 @@ a:focus {
     color: #fff;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle:focus,
+/* .navbar-custom .navbar-brand .navbar-toggle:focus,
 .navbar-custom .navbar-brand .navbar-toggle:active {
     outline: 0;
 }
 
 .navbar-custom a {
     color: #fff;
-}
+} */
 
-.navbar-custom .nav li a {
+/* .navbar-custom .nav li a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
-}
+} */
 
-.navbar-custom .nav li a:hover {
+/* .navbar-custom .nav li a:hover {
     outline: 0;
     color: rgba(255,255,255,.8);
     background-color: transparent;
-}
+} */
 
-.navbar-custom .nav li a:focus,
+/* .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:active {
     outline: 0;
     background-color: transparent;
-}
+} */
 
-.navbar-custom .nav li.active {
+/* .navbar-custom .nav li.active {
     outline: 0;
 }
 
@@ -114,7 +114,7 @@ a:focus {
 
 .navbar-custom .nav li.active a:hover {
     color: #fff;
-}
+} */
 
 @media(min-width:768px) {
     .navbar-custom {
@@ -141,12 +141,13 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: #fff;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../img/muscle.jpg) no-repeat bottom center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+	
 }
 
 .intro .intro-body {
@@ -247,15 +248,12 @@ div.malefemalefrontpage{
 }
 h1.page-header
 {
+	color : white;
 	text-shadow:
-
-    -1px -1px 0 #39718C,
-
-    1px -1px 0 #39718C,
-
-    -1px 1px 0 #39718C,
-
-    1px 1px 0 #39718C
+    -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 #white
 
 }
 
