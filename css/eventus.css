@@ -262,11 +262,8 @@ h1.page-header
 {
 	font-weight : bold;
 	text-rendering : optimizeLegibility;
-	text-shadow:
-    -1px -1px 0 #42dca3,
-    1px -1px 0 #42dca3,
-    -1px 1px 0 #42dca3,
-    1px 1px 0 #42dca3;
+    color : transparent;
+	text-shadow:0px 0px 1px #42dca3;
 
 }
 

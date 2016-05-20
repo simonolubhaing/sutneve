@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</HEAD>
+<BODY>
+	<DIV id="eventusmale">
+	</DIV>
+</BODY>
+
+<SCRIPT>
+	function generateProducts(xmlFile)
+    {
+        $('eventusmale').empty();
+        $(document).ready(loadXML(xmlFile));
+    }
+    function loadXML(xmlFile)
+    {
+        $.ajax({
+            type: "GET",
+            url: xmlFile,
+            dataType: "xml",
+            success: function(xml)
+            {
+                processXML(xml);
+            }
+        });
+    }
+    function processXML(xml)
+    {
+        $(xml).find("ITEM").each(
+            function(index)
+            {
+                
+            }
+        )
+    }
+    
+</SCRIPT>
+
+</HTML>
