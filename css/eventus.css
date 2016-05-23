@@ -77,44 +77,7 @@ a:focus {
     color: #fff;
 }
 
-/* .navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
-    outline: 0;
-}
 
-.navbar-custom a {
-    color: #fff;
-} */
-
-/* .navbar-custom .nav li a {
-    -webkit-transition: background .3s ease-in-out;
-    -moz-transition: background .3s ease-in-out;
-    transition: background .3s ease-in-out;
-} */
-
-/* .navbar-custom .nav li a:hover {
-    outline: 0;
-    color: rgba(255,255,255,.8);
-    background-color: transparent;
-} */
-
-/* .navbar-custom .nav li a:focus,
-.navbar-custom .nav li a:active {
-    outline: 0;
-    background-color: transparent;
-} */
-
-/* .navbar-custom .nav li.active {
-    outline: 0;
-}
-
-.navbar-custom .nav li.active a {
-    background-color: rgba(255,255,255,.3);
-}
-
-.navbar-custom .nav li.active a:hover {
-    color: #fff;
-} */
 
 @media(min-width:768px) {
     .navbar-custom {
@@ -249,21 +212,38 @@ div.malefemalefrontpage{
 div.malefemalefrontpage img
 {	
 	border : 1px solid transparent;
-	border-radius : 3px;
-	padding : 10px;
-	-webkit-transition: border-color 2s;
-	transition: border-color 2s;
+	border-radius : 2px;
+	padding : 2px;
+	-webkit-transition: background-color 2s;
+	transition: background-color 2s;
 }
 div.malefemalefrontpage img:hover{
-	border-color : #42dca3;
-	
+	background-color : rgba(105,199,183, 0.5);
+	animation-name : bouncingText;
+  animation-duration : 1.5s;
+  animation-iteration-count:1;
+ 
 }
 h1.page-header
 {
 	font-weight : bold;
 	text-rendering : optimizeLegibility;
     color : transparent;
-	text-shadow:0px 0px 1px #42dca3;
-
+	text-shadow:0px 0px 1px rgba(255,255,255, 1.0);
+	font-size : 50px;
+	background-color : rgba(47,79,79, 0.4);
+	padding : 25px;
+	margin-bottom : 25px;
 }
+
+@keyframes bouncingText {
+
+  60% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
