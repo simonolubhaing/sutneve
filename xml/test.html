@@ -8,11 +8,11 @@
 </BODY>
 
 <SCRIPT>
-	function generateProducts(xmlFile)
-    {
-        $('eventusmale').empty();
-        $(document).ready(loadXML(xmlFile));
-    }
+	$(document).ready(function(){
+		$('eventusmale').empty();
+		loadXML("eventusmale.xml");
+	});
+
     function loadXML(xmlFile)
     {
         $.ajax({
@@ -27,10 +27,21 @@
     }
     function processXML(xml)
     {
-        $(xml).find("ITEM").each(
+        const ITEMS_PER_ROW=4;
+		$(xml).find("ITEM").each(
             function(index)
             {
-                
+					if(index % ITEMS_PER_ROW == 0)
+					{
+						$('#eventusmale').append('</DIV>');
+						$('#eventusmale').append('<DIV CLASS="row">');
+					}
+					$('#eventusmale').append('	<DIV class="col-md-3 portfolio-item">');
+					$('#eventusmale').append('		<A HREF="#">'); 
+					$('#eventusmale').append('			<IMG class="img-responsive" src="http://placehold.it/750x450" alt="">'); 
+					$('#eventusmale').append('		</A>');
+					$('#eventusmale').append('	</DIV>');
+
             }
         )
     }
@@ -38,3 +49,5 @@
 </SCRIPT>
 
 </HTML>
+
+

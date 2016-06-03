@@ -31,7 +31,35 @@
 		<script>
 		$(document).ready( function() {    
 				$("nav").load("navcode.html");    
+				$('eventusmale').empty();
+				loadXML("xml/eventusmale.xml");
 		});
+		function loadXML(xmlFile)
+		{
+			$.ajax({
+				type: "GET",
+				url: xmlFile,
+				dataType: "xml",
+				success: function(xml)
+				{
+					processXML(xml);
+				}
+			});
+		}
+		function processXML(xml)
+		{		
+			var $row= $('<DIV CLASS="row"></DIV>');
+			$(xml).find("ITEM").each(
+				function(index)
+				{
+						var $item = $('<DIV class="col-md-3 portfolio-item"></DIV>');						
+						$item.append('<A HREF="#"><IMG class="img-responsive" src="http://placehold.it/750x450" alt=""></A>'); 
+						$row.append($item);
+				}
+			)
+			$("#eventusmale").append($row);			
+			
+		}
 		</script>
 </head>
 
@@ -54,84 +82,9 @@
         <!-- /.row -->
 
         <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="img/eventusmale/tshirt1.jpg" alt="">
-                </a>
-				<p>T-Shirt 1</p>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-				<p>T-Shirt 2</p>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-				<p>T-Shirt 3</p>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-				<p>T-Shirt 4</p>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
-
+		<DIV id="eventusmale">
+			
+		</DIV>
         <hr>
 
         <!-- Footer -->
