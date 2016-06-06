@@ -52,12 +52,69 @@
 			$(xml).find("ITEM").each(
 				function(index)
 				{
-						var $item = $('<DIV class="col-md-3 portfolio-item"></DIV>');						
-						$item.append('<A HREF="#"><IMG class="img-responsive" src="http://placehold.it/750x450" alt=""></A>'); 
-						$row.append($item);
+						var productTitle = $(this).find("TITLE");
+						var productDescription = $(this).find("DESCRIPTION");
+						
+						var $item = $('<DIV class="col-md-3 portfolio-item"></DIV>');
+						$item.append('<A HREF="#" data-toggle="modal" data-target="#product'+index+'"><IMG class="img-responsive" src="http://placehold.it/750x450" alt=""></A>'); 
+						
+						//Now create the modal code
+						var $productmodaltarget = $('<DIV id="product'+index+'" class="modal fade" role="dialog"></DIV>');
+						
+						var $modalDialog = $('<DIV class="modal-dialog"></DIV>');
+						$productmodaltarget.append($modalDialog);
+						
+						var $modalContent = $('<DIV class="modal-content"></DIV>');
+						$modalDialog.append($modalContent);
+						
+						//Create the modal header
+						var modalHeader = document.createElement('DIV');
+						populateModalHeader(modalHeader, productTitle); 
+						$(modalHeader).addClass("modal-header").appendTo($modalContent);
+						
+						var modalBody = document.createElement('DIV');
+						populateModalBody(modalBody, productDescription);
+						$(modalBody).addClass("modal-body").appendTo($modalContent);
+						
+						var modalFooter = document.createElement('DIV');
+						$(modalFooter).addClass("modal-footer").appendTo($modalContent);
+						
+						//This is the target of the link which launches the modal
+						$item.append($productmodaltarget);
+						
+						$item.append('<H4>'+productTitle.text()+'</H4>');
+						$row.append($item);	
 				}
 			)
 			$("#eventusmale").append($row);			
+			
+		}
+		
+		function populateModalHeader(modalHeader, title)
+		{
+			var closeButton = $('<BUTTON type="button" class="close" data-dismiss="modal">&times;</BUTTON>');
+			$(modalHeader).append(closeButton);				
+			$(modalHeader).append('<H3>'+title.text()+'</H3>');
+		}
+		
+		function populateModalBody(modalBody, description)
+		{
+			var modalBodyContentRow = $('<DIV class="row"></DIV>');
+			//Column 1 for image
+			var modalBodyContentCol1 = $('<DIV class="col-md-8"></DIV>');
+			modalBodyContentCol1.append('<IMG class="img-responsive" src="http://placehold.it/600x400" alt="">');
+			modalBodyContentRow.append(modalBodyContentCol1);
+            
+			var modalBodyContentCol2 = $('<DIV class="col-md-4"></DIV>');
+			modalBodyContentCol2.append('<P>'+description.text()+'</P>');
+            modalBodyContentRow.append(modalBodyContentCol2);    
+			
+			$(modalBody).append(modalBodyContentRow);
+			
+			//Now a row for the pictures
+            var modalBodyPicsRow = $('<DIV class="row"></DIV>');
+			var modalBodyPicsCol1 = $('<DIV class="col-md-4"></DIV>');
+
 			
 		}
 		</script>
@@ -83,7 +140,7 @@
 
         <!-- Projects Row -->
 		<DIV id="eventusmale">
-			
+			<!--Content loaded here -->
 		</DIV>
         <hr>
 

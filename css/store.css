@@ -20,18 +20,15 @@ h1.page-header
     -1px 1px 0 #42dca3,
     1px 1px 0 #42dca3;
 }
+
 img 
 {
 
   border: 10px solid #fff;  
-  float: left;
-  height: 300px;
-  width: 300px;
-  margin: 20px;
-  overflow: hidden;
+ 
   
   -webkit-box-shadow: 2px 3px 3px 2px rgba(3, 46, 92, 0.2);
-          box-shadow: box-shadow: 2px 3px 3px 2px rgba(3, 46, 92, 0.2);
+		box-shadow: 2px 3px 3px 2px rgba(3, 46, 92, 0.2);
 		  
   -webkit-transition: all 0.5s ease;
      -moz-transition: all 0.5s ease;
