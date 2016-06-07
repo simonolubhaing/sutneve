@@ -1,6 +1,6 @@
 body {
 	padding-top: 70px; 
-	font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-family: 'Lora', serif;
 }
 #eventusmale::after
 {
@@ -26,12 +26,13 @@ h1.page-header
 {
 
 	font-weight : bold;
-	color : white;
+	color :white;
 	text-shadow : 
 	-1px -1px 0 #42dca3,
     1px -1px 0 #42dca3,
     -1px 1px 0 #42dca3,
     1px 1px 0 #42dca3;
+	text-rendering : optimizeLegibility;
 }
 
 .portfolio-item img 
@@ -62,4 +63,8 @@ h1.page-header
 div.modalBodyPicsRow
 {
 	margin-top : 30px;
+}
+.col-md-3 h4
+{
+	color : #42dca3;
 }
