@@ -4,7 +4,7 @@ body {
 }
 #eventusmale::after
 {
-	 background: url(../img/logo/key.png) no-repeat center scroll;
+	 background: url(../img/logo/key.png) no-repeat center fixed;
 	 background-size: 600px 500px;
 	 opacity: 0.1;
 	 z-index: -1; 
