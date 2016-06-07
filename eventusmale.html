@@ -54,6 +54,9 @@
 				{
 						var productTitle = $(this).find("TITLE");
 						var productDescription = $(this).find("DESCRIPTION");
+						var image1Location = $(this).find("PHOTO_LOCATION_1");
+						var image2Location = $(this).find("PHOTO_LOCATION_2");
+						var image3Location = $(this).find("PHOTO_LOCATION_3");
 						
 						var $item = $('<DIV class="col-md-3 portfolio-item"></DIV>');
 						$item.append('<A HREF="#" data-toggle="modal" data-target="#product'+index+'"><IMG class="img-responsive portfolio-pic" src="http://placehold.it/750x450" alt=""></A>'); 
@@ -73,7 +76,7 @@
 						$(modalHeader).addClass("modal-header").appendTo($modalContent);
 						
 						var modalBody = document.createElement('DIV');
-						populateModalBody(modalBody, productDescription);
+						populateModalBody(modalBody, productDescription, image1Location, image2Location, image3Location);
 						$(modalBody).addClass("modal-body").appendTo($modalContent);
 						
 						var modalFooter = document.createElement('DIV');
@@ -82,7 +85,7 @@
 						//This is the target of the link which launches the modal
 						$item.append($productmodaltarget);
 						
-						$item.append('<H4>'+productTitle.text()+'</H4>');
+						$item.append('<H5>'+productTitle.text()+'</H5>');
 						$row.append($item);	
 				}
 			)
@@ -97,7 +100,7 @@
 			$(modalHeader).append('<H3>'+title.text()+'</H3>');
 		}
 		
-		function populateModalBody(modalBody, description)
+		function populateModalBody(modalBody, description, img1, img2, img3)
 		{
 			var modalBodyContentRow = $('<DIV class="row"></DIV>');
 			//Column 1 for image
@@ -115,14 +118,15 @@
             var modalBodyPicsRow = $('<DIV class="row modalBodyPicsRow"></DIV>');
 			var modalBodyPicsCol1 = $('<DIV class="col-md-4 text-right"></DIV>');
             modalBodyPicsCol1.append(
-                '<IMG class="img-responsive" src="http://placehold.it/100x100" alt="">');
+                '<IMG class="img-responsive eventusthumbnail" src="'+img1.text()+'" alt="">');
             
             var modalBodyPicsCol2 = $('<DIV class="col-md-4 text-right"></DIV>');
             modalBodyPicsCol2.append(
-                '<IMG class="img-responsive" src="http://placehold.it/100x100" alt="">');
+                '<IMG class="img-responsive eventusthumbnail" src="'+img2.text()+'" alt="">');
             
-            var modalBodyPicsCol3 = $('<DIV class="col-md-4 text-right"></DIV>');                        modalBodyPicsCol3.append(
-                '<IMG class="img-responsive" src="http://placehold.it/100x100" alt="">');
+            var modalBodyPicsCol3 = $('<DIV class="col-md-4 text-right"></DIV>');                        
+			modalBodyPicsCol3.append(
+                '<IMG class="img-responsive eventusthumbnail" src="'+img3.text()+'" alt="">');
 
             modalBodyPicsRow.append(modalBodyPicsCol1);
             modalBodyPicsRow.append(modalBodyPicsCol2);
