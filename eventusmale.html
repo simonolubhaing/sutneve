@@ -56,7 +56,7 @@
 						var productDescription = $(this).find("DESCRIPTION");
 						
 						var $item = $('<DIV class="col-md-3 portfolio-item"></DIV>');
-						$item.append('<A HREF="#" data-toggle="modal" data-target="#product'+index+'"><IMG class="img-responsive" src="http://placehold.it/750x450" alt=""></A>'); 
+						$item.append('<A HREF="#" data-toggle="modal" data-target="#product'+index+'"><IMG class="img-responsive portfolio-pic" src="http://placehold.it/750x450" alt=""></A>'); 
 						
 						//Now create the modal code
 						var $productmodaltarget = $('<DIV id="product'+index+'" class="modal fade" role="dialog"></DIV>');
@@ -112,10 +112,23 @@
 			$(modalBody).append(modalBodyContentRow);
 			
 			//Now a row for the pictures
-            var modalBodyPicsRow = $('<DIV class="row"></DIV>');
-			var modalBodyPicsCol1 = $('<DIV class="col-md-4"></DIV>');
+            var modalBodyPicsRow = $('<DIV class="row modalBodyPicsRow"></DIV>');
+			var modalBodyPicsCol1 = $('<DIV class="col-md-4 text-right"></DIV>');
+            modalBodyPicsCol1.append(
+                '<IMG class="img-responsive" src="http://placehold.it/100x100" alt="">');
+            
+            var modalBodyPicsCol2 = $('<DIV class="col-md-4 text-right"></DIV>');
+            modalBodyPicsCol2.append(
+                '<IMG class="img-responsive" src="http://placehold.it/100x100" alt="">');
+            
+            var modalBodyPicsCol3 = $('<DIV class="col-md-4 text-right"></DIV>');                        modalBodyPicsCol3.append(
+                '<IMG class="img-responsive" src="http://placehold.it/100x100" alt="">');
 
-			
+            modalBodyPicsRow.append(modalBodyPicsCol1);
+            modalBodyPicsRow.append(modalBodyPicsCol2);
+            modalBodyPicsRow.append(modalBodyPicsCol3);
+            
+             $(modalBody).append(modalBodyPicsRow);
 		}
 		</script>
 </head>
