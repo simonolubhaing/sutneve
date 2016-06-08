@@ -54,10 +54,10 @@ h1.page-header
 .portfolio-pic:hover
 {
 	  -webkit-transform: rotate(-10deg);
-     -moz-transform: rotate(-10deg);
-       -o-transform: rotate(-10deg);
-      -ms-transform: rotate(-10deg);
-          transform: rotate(-10deg);
+     -moz-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
 }
 
 div.modalBodyPicsRow
@@ -67,6 +67,6 @@ div.modalBodyPicsRow
 
 .eventusthumbnail
 {
-		max-width : 100px;
-		max-height : 100px;
+	max-width : 100px;
+	max-height : 100px;
 }
