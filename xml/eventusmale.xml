@@ -2,11 +2,11 @@
 
 	<ITEM>
 		<TITLE>T-Shirt1</TITLE>
-		<DESCRIPTION>Eventus T-Shirt1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo aliquam pretium. In id eros aliquam est rhoncus dictum. Suspendisse potenti. Phasellus rutrum sem ac erat dignissim tristique. Integer ultricies augue et quam accumsan, eu fermentum dui pulvinar. Nulla facilisi. Curabitur a sem velit. Sed quis diam molestie, semper metus sed, pharetra turpis. Pellentesque ac sodales massa. Nulla pulvinar fringilla justo id rhoncus. </DESCRIPTION>
+		<DESCRIPTION>Eventus T-Shirt1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus commodo aliquam pretium. In id eros aliquam est rhoncus dictum. Suspendisse potenti. Phasellus rutrum sem ac erat dignissim tristique. </DESCRIPTION>
 		<PRICE>9.99</PRICE>
-		<PHOTO_LOCATION_1>/img/eventusmale/tshirt1/t-shirt1.jpeg</PHOTO_LOCATION_1>
-		<PHOTO_LOCATION_2>/img/eventusmale/tshirt1/t-shirt1a.jpeg</PHOTO_LOCATION_2>
-		<PHOTO_LOCATION_3>/img/eventusmale/tshirt1/t-shirt1b.jpeg</PHOTO_LOCATION_3>
+		<PHOTO_LOCATION_1>img/eventusmale/tshirt1/t-shirt1.jpeg</PHOTO_LOCATION_1>
+		<PHOTO_LOCATION_2>img/eventusmale/tshirt1/t-shirt1a.jpeg</PHOTO_LOCATION_2>
+		<PHOTO_LOCATION_3>img/eventusmale/tshirt1/t-shirt1b.jpeg</PHOTO_LOCATION_3>
 	</ITEM>
     <ITEM>
 		<TITLE>T-Shirt2</TITLE>
