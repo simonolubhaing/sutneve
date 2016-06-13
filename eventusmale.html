@@ -30,14 +30,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-		<script>
-		$(document).ready( function() {    
-				$("nav").load("navcode.html");    
-				$('eventusmale').empty();
-				loadXML("xml/eventusmale.xml");
-		});
-
-		</script>
+	<script>
+	$(document).on("click", ".eventusthumbnail", function(){
+						alert("The paragraph was clicked.");
+					});
+	</script>
+		
 </head>
 
 <body>
@@ -45,6 +43,11 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<!-- Content loaded from navcode.html -->
+		<script>
+			$(document).ready( function() {    
+					$("nav").load("navcode.html");   
+				});
+		</script>
 	</nav>
 
     <!-- Page Content -->
@@ -60,6 +63,12 @@
 
         <!-- Projects Row -->
 		<DIV id="eventusproducts">
+			<script>
+			$(document).ready( function() {       
+					$('eventusproducts').empty();
+					loadXML("xml/eventusmale.xml");
+			});
+			</script>
 		</DIV>
         <hr>
 

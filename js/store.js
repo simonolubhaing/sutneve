@@ -96,5 +96,6 @@ function populateModalBody(modalBody, description, img1, img2, img3)
 	modalBodyPicsRow.append(modalBodyPicsCol2);
 	modalBodyPicsRow.append(modalBodyPicsCol3);
 	
-	 $(modalBody).append(modalBodyPicsRow);
+	$(modalBody).append(modalBodyPicsRow);
+		
 }
