@@ -17,6 +17,7 @@ body {
 }
 .portfolio-item {
 	margin-bottom: 25px;
+	
 }
 footer {
 	margin: 50px 0;
@@ -37,7 +38,7 @@ h1.page-header
 .portfolio-item img 
 {
 
-  border: 10px solid #fff;  
+  border: 8px solid #fff;  
   
   -webkit-box-shadow: 2px 3px 3px 2px rgba(3, 46, 92, 0.2);
 		box-shadow: 2px 3px 3px 2px rgba(3, 46, 92, 0.2);
@@ -46,9 +47,11 @@ h1.page-header
      -moz-transition: all 0.5s ease;
        -o-transition: all 0.5s ease;
       -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;		  
-
+          transition: all 0.5s ease;	
+	max-width : 250px;
+	height : auto;		  
 }
+
 
 .portfolio-pic:hover
 {

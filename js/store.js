@@ -23,7 +23,7 @@ function processXML(xml)
 				var image3Location = $(this).find("PHOTO_LOCATION_3");
 				
 				var $item = $('<DIV class="col-md-3 portfolio-item"></DIV>');
-				$item.append('<A HREF="#" data-toggle="modal" data-target="#product'+index+'"><IMG class="img-responsive portfolio-pic" src="http://placehold.it/750x450" alt=""></A>'); 
+				$item.append('<A HREF="#" data-toggle="modal" data-target="#product'+index+'"><IMG class="img-responsive portfolio-pic" src="'+image1Location.text()+'" alt=""></A>'); 
 				
 				//Now create the modal code
 				var $productmodaltarget = $('<DIV id="product'+index+'" class="modal fade" role="dialog"></DIV>');
@@ -69,7 +69,7 @@ function populateModalBody(modalBody, description, img1, img2, img3)
 	var modalBodyContentRow = $('<DIV class="row"></DIV>');
 	//Column 1 for image
 	var modalBodyContentCol1 = $('<DIV class="col-md-8"></DIV>');
-	modalBodyContentCol1.append('<IMG class="img-responsive" src="http://placehold.it/800x600" alt="">');
+	modalBodyContentCol1.append('<IMG class="img-responsive" id="mainproductimage" src="http://placehold.it/800x600" alt="">');
 	modalBodyContentRow.append(modalBodyContentCol1);
 	
 	var modalBodyContentCol2 = $('<DIV class="col-md-4"></DIV>');
@@ -97,5 +97,9 @@ function populateModalBody(modalBody, description, img1, img2, img3)
 	modalBodyPicsRow.append(modalBodyPicsCol3);
 	
 	$(modalBody).append(modalBodyPicsRow);
-		
+}
+
+function changeMainPhoto(imgPath)
+{
+	$("#mainproductimage").attr("src", imgPath);
 }
